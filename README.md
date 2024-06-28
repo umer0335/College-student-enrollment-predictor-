@@ -1,6 +1,6 @@
 # College-student-enrollment-predictor
 ## by Muhammad Umer Tahir
-This machine learning model is designed to assist colleges in predicting the likelihood of a student enrolling after receiving an acceptance offer. By analyzing various factors and features, the model aims to provide insights that can help institutions better understand and anticipate student enrollment behavior.
+This machine learning model is designed to assist colleges in predicting the likelihood of a student enrolling after receiving an acceptance offer. By analyzing various factors and features, the model aims to provide insights that can help institutions better understand and anticipate student enrollment behavior. I tested various machine learning algorithms including KNN, decision tree, and gradient boosting but Random forest came out to be the best model for this project.
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Files and Directories](#files-and-directories)
