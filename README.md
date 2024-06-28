@@ -1,4 +1,5 @@
 # College-student-enrollment-predictor
+## by Muhammad Umer Tahir
 This machine learning model is designed to assist colleges in predicting the likelihood of a student enrolling after receiving an acceptance offer. By analyzing various factors and features, the model aims to provide insights that can help institutions better understand and anticipate student enrollment behavior.
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -8,14 +9,13 @@ This machine learning model is designed to assist colleges in predicting the lik
 - [Web Portal for Individual Predictions](#web-portal-for-individual-predictions)
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
-- [License](#license)
 ## Project Overview
 This project includes three main Python scripts:
 1. `training.py`: Used to create and train the model, and check its accuracy.
 2. `predicting.py`: Used to make predictions for a whole CSV file.
 3. `app.py`: A web portal to get individual predictions through a user-friendly interface.
 
-**Note:** Due to privacy and sensitivity concerns, the actual dataset and feature details used in the training process are not provided. Users are encouraged to use their own datasets and features.
+**Note:** Due to privacy and sensitivity concerns by the admissions office at Rhodes College, the actual dataset and feature details used in the training process are not provided. Users are encouraged to use their own datasets and features.
 
 ## Files and Directories
 - `training.py`: Script to train the model.
@@ -38,7 +38,7 @@ To get started with the project, follow these steps:
     ```
 
 3. **Prepare your dataset:**
-    Ensure your dataset is in CSV format and contains the relevant features you want to use for prediction.
+    Ensure your dataset is in CSV format and contains the relevant features you want to use for prediction. I have also provided the to pick     and choose specific columns from the CSV file.
 
 ## Running the Model
 
@@ -48,19 +48,19 @@ To get started with the project, follow these steps:
    - Ensure that the feature columns are correctly referenced.
 
 2. **Run the training script:**
-    ```bash
-    python training.py
     ```
-   This script will train the model and save it for future use.
+    python3 training.py
+    ```
+   This script will train the model and save it for future use. Using this code you can also test the accuracy of your model while predicting using the split function between training and testing datasets. If you have limited data, I will also recommend training the model on the whole dataset, once you're satisfied with your model.
 
-### Making Batch Predictions
+### Making Batch Predictions using CSV file
 1. **Update the `predicting.py` file:**
-   - Replace `'location of your model'` and `'location of your dict'` with the paths to your saved model and dictionary files.
-   - Replace `'location of your new dataset'` with the path to the CSV file you want to predict.
+   - Replace `'location of your model'` and `'location of your dict'` with the paths to your saved model and dictionary files during training.
+   - Replace the `'location of your new dataset'` with the path to the CSV file you want to predict.
 
 2. **Run the predicting script:**
-    ```bash
-    python predicting.py
+    ```
+    python3 predicting.py
     ```
 
 ## Web Portal for Individual Predictions
@@ -68,9 +68,8 @@ To get started with the project, follow these steps:
    - Set the environment variables `MODEL_PATH` and `DICT_PATH` to the paths of your saved model and dictionary files.
 
 2. **Run the Flask app:**
-    ```bash
-    export FLASK_APP=app.py
-    flask run
+    ```
+    python3 app.py
     ```
    Open a web browser and go to `http://127.0.0.1:5000/` to access the web portal. Enter the required features to get individual predictions.
 
@@ -81,3 +80,6 @@ The project requires the following Python libraries:
 - numpy
 - pandas
 - scikit-learn
+
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
