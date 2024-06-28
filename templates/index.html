@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Prediction</title>
+</head>
+<body>
+    <h2>Student Enrollment Prediction</h2>
+    <form action="/predict" method="post">
+        <label for="applications_round">Applications Round:</label>
+        <select id="applications_round" name="applications_round" required>
+            <option value="2023 Regular Decision">2023 Regular Decision</option>
+            <option value="2023 Early Decision 2">2023 Early Decision 2</option>
+            <option value="2023 Early Action">2023 Early Action</option>
+            <option value="2023 Early Decision 1">2023 Early Decision 1</option>
+            <option value="2022 Regular Decision">2022 Regular Decision</option>
+            <option value="2020 Early Action">2020 Early Action</option>
+            <option value="2021 Regular Decision">2021 Regular Decision</option>
+            <option value="2021 Early Action">2021 Early Action</option>
+            <option value="2020 Regular Decision">2020 Regular Decision</option>
+            <option value="2020 Early Decision 2">2020 Early Decision 2</option>
+            <option value="2021 Early Decision 2">2021 Early Decision 2</option>
+            <option value="2022 Early Decision 1">2022 Early Decision 1</option>
+            <option value="2022 Early Action">2022 Early Action</option>
+            <option value="2020 Early Decision 1">2020 Early Decision 1</option>
+            <option value="2022 Early Decision 2">2022 Early Decision 2</option>
+            <option value="2021 Early Decision 1">2021 Early Decision 1</option>
+        </select>
+        <br><br>
+
+        <label for="decisions_name">Decisions Name:</label>
+        <select id="decisions_name" name="decisions_name" required>
+            <option value="Admission Office Correspondence">Admission Office Correspondence</option>
+            <option value="Revised Financial Aid Award">Revised Financial Aid Award</option>
+            <option value="Financial Aid">Financial Aid</option>
+            <option value="Top Scholar Correspondence">Top Scholar Correspondence</option>
+            <option value="Cancelled Accept">Cancelled Accept</option>
+            <option value="Financial Aid Correspondence">Financial Aid Correspondence</option>
+            <option value="Pending Deposit">Pending Deposit</option>
+            <option value="Scholarship Correspondence">Scholarship Correspondence</option>
+            <option value="Admit">Admit</option>
+            <option value="Defer">Defer</option>
+            <option value="Wait List">Wait List</option>
+            <option value="Wait List Lack of Interest">Wait List Lack of Interest</option>
+            <option value="Deposit">Deposit</option>
+            <option value="Cancelled Deposit">Cancelled Deposit</option>
+            <option value="Enrolled from Defer">Enrolled from Defer</option>
+            <option value="Gap Year Correspondence">Gap Year Correspondence</option>
+        </select>
+        <br><br>
+
+        <label for="visit">Visit:</label>
+        <select id="visit" name="visit" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+        <br><br>
+
+        <label for="sports_varsity_recruit">Sports Varsity Recruit:</label>
+        <select id="sports_varsity_recruit" name="sports_varsity_recruit" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
