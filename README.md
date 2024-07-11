@@ -83,3 +83,7 @@ The project requires the following Python libraries:
 
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+
+## Further improvements
+I am planning on improving the web app and make it visually appealing by using html and CSS.
+Coming Soon!
